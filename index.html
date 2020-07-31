@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/1687bfa95b.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+ <!-- formulario  -->
+<div class="container border rounded mt-3 ">
+    <div class="bg-light border-bottom row" >
+        <h3 class="col-12">Formulario de pago</h3>   
+    </div>
+    <form class="pl-4 mt-3" role="form" >
+    
+    <div class="from-row">
+        <label class="mb-0 col-4" for="number-card"> Tarjeta #</label>
+        <label class="mb-0 col-2" for="number-card">CVC#</label>
+        <label class="mb-0 col-4" for="number-card">Cantidad</label>
+    </div>
+    <div class="from-row d-flex">
+        <input class="col-4 form-control" id="number-card" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" 
+        autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required title="INGRESE NUMERO DE TARJETA" >
+    
+        <input class="col-2 mr-4 ml-4 form-control" id="cvc" type="tel" inputmode="numeric" pattern="[0-9\s]{3}" 
+        autocomplete="cvc-number" maxlength="3" placeholder="000" required title="INGRESE CODIGO CVC">
+    
+        <input class="col-4 form-control" id="cantidad" type="tel" inputmode="numeric" pattern="[0-9]+" 
+        autocomplete="cantidad" placeholder="$" required title="INGRESE CANTIDAD">
+    
+    </div>
+    <div class="from-row">
+        <label class="mb-0 col-5 mr-2" for="nombre"required>Nombre</label>
+        <label class="mb-0 col-5" for="apellidos">Apellidos</label>
+    </div>
+    <div class="from-row d-flex">
+        <input class="col-5 mr-2 form-control" id="nombre" type="text" placeholder="Nombre" pattern="[a-z|A-Z]" required title="INGRESE NOMBRE TITULAR">
+    
+        <input class="col-5 form-control" id="apellido" type="text" placeholder="Apellidos" pattern="[a-z|A-Z]" required title="INGRESE APELLIDOS">
+    
+    </div>
+    <div class="from-row">
+        <label class="col-3 mb-0" for="ciudad">Ciudad</label>
+        <label class="col-3 mb-0" for="pais">Pais</label>
+        <label class="col-2 mb-0" for="codigo-postal">Codigo Postal</label>
+    </div>
+    <div class="d-flex">
+        <input class="col-3 form-control" id="ciudad" type="text" placeholder="Ciudad" pattern="[a-z|A-Z]" required title="INGRESE CIUDAD">
+        <select class="form-control col-3 mr-3 ml-3 " id="select-pais" required title="SELECCIONE UNA OPCION">
+                <option value="">Seleccione Pais</option>
+            <option>Venezuela</option>
+            <option>Espana</option>
+            <option>Peru</option>
+            <option>Bolivia</option>
+        </select>
+        <input class="col-2 form-control" id="codigo-postal" type="tel" inputmode="numeric" pattern="[0-9]{5}"
+                maxlength="5" autocomplete="cc-number" placeholder="00000" required title="INGRESE CODIGO POSTAL">
+    </div>
+    <div class="from-row">
+        <label class="mb-0 col-5" for="select-card">Seleccione tarjeta</label>
+        <label class="mb-0 col-4" for="comentarios">Comentarios</label>
+    </div>
+    <div class="from-row d-flex">
+        <div class="form-check form-check-inline col-4 offset-1 ">
+            
+            <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta1" value="option1"required title="SELECCION OPCION DE PAGO">
+            <label class="form-check-label" for="tarjeta1"><i class="fa fa-cc-visa" aria-hidden="true"></i></label>
+            
+            <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta2" value="option1"required title="SELECCION OPCION DE PAGO">
+            <label class="form-check-label" for="tarjeta2"><i class="fa fa-cc-diners-club" aria-hidden="true"></i></label>
+            
+            <input class="form-check-input" type="radio" name="tarjetas" id="tarjeta3" value="option1"required title="SELECCION OPCION DE PAGO">
+            <label class="form-check-label" for="tarjeta3"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></label>
+        </div>  
+    
+        <textarea class="col-6 form-control" id="comentario" type="text" placeholder="Escriba aqui...."> </textarea>
+    </div>
+    <div class="row m-2 d-flex justify-content-end ">
+    <div class="col-6 d-flex justify-content-end">
+        <button type="reset" class="btn-sm btn-secondary mr-2">Borrar</button>
+        <button type="submit" class="btn-sm btn-primary ">Enviar</button>
+    </div>
+    </div>
+</form>
+</div>
+            
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
